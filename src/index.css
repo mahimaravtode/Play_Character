@@ -1,0 +1,90 @@
+/* @layer base {
+  @font-face {
+    font-family: 'Nunito';
+    src: url('/src/assets/Fonts/Nunito-Regular.otf') format('otf');
+  }
+}
+
+html, body{
+  font-family: Nunito;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home_section {
+  background-image: url('./assets/bgImg.jpg');
+  height: 75vh;
+  width: 100%;
+  background-size: cover !important;
+  opacity: 0.9;
+
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.863);
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: smothScroll 1s forwards;
+  background: white !important;
+  color: #808080 !important;
+  z-index: 999;
+  font-weight: 300;
+
+
+}
+
+.sticky ul li a {
+  color: black
+}
+
+@keyframes smothScroll {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bg {
+  background-image: url('/src/assets/bgImg1.jpg');
+}
+
+.overlay1 {
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+
+}
+
+.afterContent1:after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  background-color: blue;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: all ease 0.4s;
+}
+
+.afterContent1:hover:after {
+  width: 100%;
+}
+
+.hoverImage:hover {
+  background-image: url('./assets/HoverImg1.jpg');
+  color: #fff;
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
+}
